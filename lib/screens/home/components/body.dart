@@ -42,7 +42,13 @@ class Body extends StatelessWidget {
                           color: kPrimaryColor.withOpacity(0.23))
                     ],
                   ),
-                  child: TextField(),
+                  child: TextField(
+                    decoration: InputDecoration(
+                        hintText: "Search",
+                        hintStyle: TextStyle(
+                          color: kPrimaryColor.withOpacity(0.5),
+                        )),
+                  ),
                 ),
               )
             ],
