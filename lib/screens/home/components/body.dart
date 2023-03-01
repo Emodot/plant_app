@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:plant_app/constants.dart';
 
 import 'header_with_searchbox.dart';
+import 'recommend_plants.dart';
 import 'title_with_more_btn.dart';
 
 class Body extends StatelessWidget {
@@ -18,11 +19,11 @@ class Body extends StatelessWidget {
         children: [
           HeaderWithSearchBox(size: size),
           TitleWithMoreBtn(title: "Recommended", press: () {}),
-          Container(
-            width: size.width * 0.4,
-          )
+          RecommendPlants(),
+          TitleWithMoreBtn(title: "Featured Plants", press: () {})
         ],
       ),
     );
   }
 }
+
