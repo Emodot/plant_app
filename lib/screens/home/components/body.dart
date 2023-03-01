@@ -19,11 +19,26 @@ class Body extends StatelessWidget {
         children: [
           HeaderWithSearchBox(size: size),
           TitleWithMoreBtn(title: "Recommended", press: () {}),
-          RecommendPlants(),
-          TitleWithMoreBtn(title: "Featured Plants", press: () {})
+          const RecommendPlants(),
+          TitleWithMoreBtn(title: "Featured Plants", press: () {}),
+          Container(
+            margin: const EdgeInsets.only(
+              left: kDefaultPadding,
+              top: kDefaultPadding / 2,
+              bottom: kDefaultPadding / 2,
+            ),
+            width: size.width * 0.8,
+            height: 185,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              image: const DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage("assets/images/bottom_img_1.png"),
+              ),
+            ),
+          )
         ],
       ),
     );
   }
 }
-
